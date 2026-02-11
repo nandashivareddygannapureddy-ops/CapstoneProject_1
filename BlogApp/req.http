@@ -1,0 +1,82 @@
+### User Register
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+  "firstName": "Nanda",
+  "lastName": "Shiva",
+  "email": "Nanda@gmail.com",
+  "password": "shiva@12345",
+  "profileImageUrl": "https://example.com/avatars/user.png"
+}
+
+### User Login
+POST http://localhost:4000/common-api/login
+Content-Type: application/json
+
+{
+  "email": "Nanda@gmail.com",
+  "password": "shiva@12345"
+ 
+}
+
+### Author Register
+POST http://localhost:4000/author-api/users
+Content-Type: application/json
+
+{
+  "firstName": "shiva",
+  "lastName": "Author",
+  "email": "shivaauthor@gmail.com",
+  "password": "Shiva@12345",
+  "profileImageUrl": "https://example.com/avatars/author.png"
+}
+
+### Create article (AUTHOR)
+POST http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+  "author":"698cb8346a963ed1a2b70ac6",
+  "title":"test1 article",
+  "category":"programming",
+  "content":"content of test1 article"
+}
+
+
+
+###Read articles of a author
+GET http://localhost:4000/author-api/articles/698acb5f6e36875e2f79a301
+
+
+
+### Update article (AUTHOR)
+PUT http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+  "author":"698acb5f6e36875e2f79a301",
+  "articleId":"698acb906e36875e2f79a307",
+  "title":"test1 article updated",
+  "category":"programming",
+  "content":"content of test2 article updated"
+}
+
+
+
+### Logout
+GET http://localhost:4000/common-api/logout/698acb5f6e36875e2f79a301
+
+
+
+
+### Test res
+GET http://localhost:4000/test
+
+###
+GET http://localhost:4000/hello
+###
+DELETE http://localhost:4000/admin-api/users/698acb5f6e36875e2f79a301
+
+###
+GET http://localhost:4000/admin-api/users/698acb5f6e36875e2f79a301
